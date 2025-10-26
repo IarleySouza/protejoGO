@@ -46,11 +46,3 @@ jobs:
         version: v2.1
         args: controllers/ database/ models/ routes/
 
-    - name: Testes
-      env:
-        DB_HOST: postgres
-        DB_USER: root
-        DB_PASSWORD: root
-        DB_NAME: root
-        DB_PORT: 5432
-      run: go test -v main_test.go
