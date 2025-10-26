@@ -30,3 +30,11 @@ jobs:
         version: v2.1
         args: controllers/ database/ models/ routes/
 
+    - name: Build
+      run: go build main.go
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: projeto_compilado
+        path: main
